@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Site</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <a href="../htmls/aboutme.html">About me</a>
+        <a href="">Work</a>
+    </div>
+    <div class="main"> 
+        <p id="info">Hi, i am Iratni Djillali an animator.</p>
+        <p style="color: #e0597e; font-size: large;" id="how"></p>
+        <button id="bt1" onclick="tell()">What can you do?</button>
+        
+    </div>
+
+</body>
+<script>
+    let info = document.getElementById('info');
+    let bt = document.getElementById("bt1");
+    let bus = document.getElementById("how");
+    function tell(){
+        info.innerHTML = "If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
+        bt.innerHTML = "Neat!"
+        bt.setAttribute("onclick", "hire()")
+        }
+        function hire(){
+        info.innerHTML = "I do all of these works on an advanced level for acceptable prices.";
+        bt.innerHTML = ""
+        bt.style.backgroundColor= "transparent";
+        bus.innerHTML = "You can hire me by clicking on work in the top right of the page.";
+        }
+</script>
+</html>
