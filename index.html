@@ -14,7 +14,7 @@
     </div>
     <div class="main"> 
         <p id="text"></p>
-        <p style="color: #e0597e; font-size: large; top: 20%;" id="how"></p>
+        <p style="color: #e0597e; font-size: large; top: 10%;" id="how"></p>
         <button id="bt1" onclick="tell()">What can you do?</button>
         
     </div>
@@ -26,12 +26,13 @@
     let bus = document.getElementById("how");
     let i=0,text;
     text = "Hi, i am Iratni Djillali an animator."
+    let main = document.querySelector("main");
 
     bt.disabled = true;
     bt.hidden = true;
     function typing(){
         if(i<text.length){
-            effect.innerHTML += text.charAt(i);
+            effect.innerHTML +="<span>"+ text.charAt(i)+ "</span>"
             i++
             setTimeout(typing,50);
         }
@@ -51,13 +52,14 @@
         bt.setAttribute("onclick", "hire()")
         }
     function hire(){
-        
         i=0;
         text = " I do all of these works on an advanced level for acceptable prices.";
         typing();
         bt.innerHTML = ""
         bt.style.backgroundColor= "transparent";
         bus.innerHTML = "You can hire me by clicking on work in the top right of the page.";
+        bt.setAttribute ("onclick", "nothing()");
         }
+    function nothing(){}
 </script>
 </html>

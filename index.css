@@ -2,6 +2,9 @@
 p,a,button{
     font-family: sans-serif;
 }
+span{
+    
+}
 html {
     height: 90%;
 }
@@ -34,19 +37,18 @@ body{
     top: 20%;
 }
 .main p {
-    opacity: 0;
-    animation: ani 2s ease-in-out forwards;
     font-family: sans-serif;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
 }
-@keyframes ani{
-    100%{
-        opacity: 1;
-    }
+span {
+    opacity: 1;
+    animation: ani 0.5s ease-in-out forwards;
+    display: inline;
 }
+
 .main button{ 
     border: none;
     width: 15%;
