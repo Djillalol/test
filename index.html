@@ -14,7 +14,7 @@
     </div>
     <div class="main"> 
         <p id="text"></p>
-        <p style="color: #e0597e; font-size: large;" id="how"></p>
+        <p style="color: #e0597e; font-size: large; top: 20%;" id="how"></p>
         <button id="bt1" onclick="tell()">What can you do?</button>
         
     </div>
@@ -27,16 +27,23 @@
     let i=0,text;
     text = "Hi, i am Iratni Djillali an animator."
 
-
+    bt.disabled = true;
+    bt.hidden = true;
     function typing(){
         if(i<text.length){
             effect.innerHTML += text.charAt(i);
             i++
             setTimeout(typing,50);
         }
+        if (i === text.length){
+        bt.disabled = false;
+        bt.hidden = false;
+        }
     }
     typing();
     function tell(){
+        bt.disabled = true;
+        bt.hidden = true;
         i=0;
         text = "If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
         typing();
@@ -44,6 +51,7 @@
         bt.setAttribute("onclick", "hire()")
         }
     function hire(){
+        
         i=0;
         text = "I do all of these works on an advanced level for acceptable prices.";
         typing();
