@@ -13,7 +13,7 @@
         <a href="">Work</a>
     </div>
     <div class="main"> 
-        <p id="info">Hi, i am Iratni Djillali an animator.</p>
+        <p id="text"></p>
         <p style="color: #e0597e; font-size: large;" id="how"></p>
         <button id="bt1" onclick="tell()">What can you do?</button>
         
@@ -21,18 +21,32 @@
 
 </body>
 <script>
-    let info = document.getElementById('info');
+    let effect = document.getElementById('text');
     let bt = document.getElementById("bt1");
     let bus = document.getElementById("how");
+    let i=0,text;
+    text = "Hi, i am Iratni Djillali an animator."
 
 
+    function typing(){
+        if(i<text.length){
+            effect.innerHTML += text.charAt(i);
+            i++
+            setTimeout(typing,50);
+        }
+    }
+    typing();
     function tell(){
-        info.innerHTML = "If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
+        i=0;
+        text = "If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
+        typing();
         bt.innerHTML = "Neat!"
         bt.setAttribute("onclick", "hire()")
         }
     function hire(){
-        info.innerHTML = "I do all of these works on an advanced level for acceptable prices.";
+        i=0;
+        text = "I do all of these works on an advanced level for acceptable prices.";
+        typing();
         bt.innerHTML = ""
         bt.style.backgroundColor= "transparent";
         bus.innerHTML = "You can hire me by clicking on work in the top right of the page.";

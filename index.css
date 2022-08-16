@@ -37,6 +37,10 @@ body{
     opacity: 0;
     animation: ani 2s ease-in-out forwards;
     font-family: sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 @keyframes ani{
     100%{
@@ -51,6 +55,10 @@ body{
     background-color: #ffbd5b;
     border-radius: 10px;
     font-size: x-large;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 
 }
 .main button:hover{  
