@@ -1,4 +1,7 @@
 
+p,a,button{
+    font-family: sans-serif;
+}
 html {
     height: 90%;
 }
@@ -29,6 +32,16 @@ body{
     text-align: center;
     position: absolute;
     top: 20%;
+}
+.main p {
+    opacity: 0;
+    animation: ani 2s ease-in-out forwards;
+    font-family: sans-serif;
+}
+@keyframes ani{
+    100%{
+        opacity: 1;
+    }
 }
 .main button{ 
     border: none;
