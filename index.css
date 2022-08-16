@@ -1,9 +1,10 @@
+
 html {
     height: 90%;
 }
 body{
     min-height: 90%;
-    background-color: white;
+    background-color: darkslategrey;
     background-size: cover;
 }
 .header{
