@@ -99,7 +99,7 @@ body, html{
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: "a b" "a c" "d d";
-        grid-auto-rows: 200px;
+        grid-auto-rows: auto;
         position: absolute;
         top: 100%;
         left: 0;
