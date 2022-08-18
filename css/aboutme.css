@@ -93,6 +93,28 @@ body, html{
     grid-area:c;
 }
 @media screen and (max-width:660px) {
+    .picgrid{
+        height:100% ;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "a b" "a c" "d d";
+        grid-auto-rows: 200px;
+        position: absolute;
+        top: 80%;
+        left: 0;
+    }
+    .grid{
+        height:100% ;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "d b" "a b" "a c";
+        grid-auto-rows: auto;
+        position: absolute;
+        top: 10%;
+        left: 0;
+    }
     
 }
 @media screen and (max-width:1450px) and (min-width:660px) {
