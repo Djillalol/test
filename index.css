@@ -99,6 +99,12 @@ body{
     font-size: x-large;
 }
 @media screen and (max-width: 650px) {
+    .animation img{
+        position: absolute;
+        top: 10%;
+        width: 10%;
+        animation: ani 40s infinite;
+    }
     .header{
         width:fit-content;
         height: 10%;
