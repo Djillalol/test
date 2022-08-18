@@ -14,7 +14,6 @@
     </div>
     <div class="main"> 
         <p id="text"></p>
-        <p style="color: #e0597e; font-size: large; top: 5%;" id="how"></p>
         <button id="bt1" onclick="tell()">What can you do?</button>
         
     </div>
@@ -23,7 +22,6 @@
 <script>
     let effect = document.getElementById('text');
     let bt = document.getElementById("bt1");
-    let bus = document.getElementById("how");
     let i=0,text;
     text = "Hi, i am Iratni Djillali an animator."
     let main = document.querySelector("main");
@@ -37,12 +35,14 @@
             setTimeout(typing,50);
         }
         if (i === text.length){
-        bt.disabled = false;
-        bt.hidden = false;
+            let lastspan = text.charAt(i);
+            bt.disabled = false;
+            bt.hidden = false;
         }
     }
     typing();
     function tell(){
+        effect.innerHTML = "";
         bt.disabled = true;
         bt.hidden = true;
         i=0;
@@ -52,12 +52,12 @@
         bt.setAttribute("onclick", "hire()")
         }
     function hire(){
+        effect.innerHTML = "";
         i=0;
-        text = " I do all of these works on an advanced level for acceptable prices.";
+        text = " You can hire me by clicking on work in the top right of the page.";
         typing();
         bt.innerHTML = ""
         bt.style.backgroundColor= "transparent";
-        bus.innerHTML = "You can hire me by clicking on work in the top right of the page.";
         bt.setAttribute ("onclick", "nothing()");
         bt.style.left = "-30000px";
         }
