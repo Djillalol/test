@@ -108,7 +108,7 @@ body, html{
         height:100% ;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr 2fr;
         grid-template-areas: "d b" "a b" "a c";
         grid-auto-rows: auto;
         position: absolute;
