@@ -1,9 +1,14 @@
+p,a,button{
+    font-family: 'Courier', monospace;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+}
 body, html{
     height: 100%;
     width: 100%;
     padding: 0;
     margin:0;
-    background: darkslategray;
+    background: #1F1D36;
 }
 .picgrid{
     height:100% ;
@@ -69,6 +74,9 @@ body, html{
     grid-gap: 10px;
     margin: 10px;
     padding: 10px;
+    font-family: 'Courier', monospace;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }
 .i1{
     background-color: #eee;
@@ -77,6 +85,9 @@ body, html{
     margin: 10px;
     padding: 10px;
     grid-area: a;
+    font-family: 'Courier', monospace;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }
 .i2{
     background-color: cornflowerblue;
@@ -85,6 +96,9 @@ body, html{
     margin: 10px;
     padding: 10px;
     grid-area: b;
+    font-family: 'Courier', monospace;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }
 .i3{
     background-color: cornflowerblue;
@@ -93,6 +107,9 @@ body, html{
     margin: 10px;
     padding: 10px;
     grid-area:c;
+    font-family: 'Courier', monospace;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }
 @media screen and (max-width:660px) {
     .picgrid{
