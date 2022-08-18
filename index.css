@@ -87,6 +87,13 @@ body{
         right: 0%;
         
     }
+    .main img{
+        width: 10%;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translateX(-50%);
+    }
     .header a{
         font-size: large;
         margin-left: 50px;
