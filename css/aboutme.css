@@ -101,7 +101,7 @@ body, html{
         grid-template-areas: "a b" "a c" "d d";
         grid-auto-rows: 200px;
         position: absolute;
-        top: 80%;
+        top: 100%;
         left: 0;
     }
     .grid{
@@ -112,7 +112,7 @@ body, html{
         grid-template-areas: "d b" "a b" "a c";
         grid-auto-rows: auto;
         position: absolute;
-        top: 10%;
+        top: 0%;
         left: 0;
     }
     
