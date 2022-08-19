@@ -21,6 +21,8 @@
   </body>
   <script>
     //declaring variables
+    const audio = new Audio();
+    audio.src = "mp3/typing.wav";
     let boy = document.getElementById("boy");
     let main = document.querySelector("main");
     let bt = document.getElementById("bt1");
@@ -57,12 +59,14 @@
     //function for typing effect
     function typing() {
       if (i < text.length) {
+        audio.play();
         effect.innerHTML += "<span>" + text.charAt(i) + "</span>";
         i++;
         setTimeout(typing, 50);
       }
       if (i === text.length) {
         enable();
+        audio.pause();
       }
     }
 
