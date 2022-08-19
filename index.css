@@ -66,8 +66,8 @@ body{
     font-smooth: never;
     -webkit-font-smoothing : none;
     border: none;
-    width: 15%;
-    height: 10%;
+    width: fit-content;
+    height: fit-content;
     color: white;
     background-color: #864879;
     border-radius: 10px;
@@ -78,7 +78,7 @@ body{
 }
 .main button:hover{  
     border: none;
-    width: 15%;
+    width: fit-content;
     color: #e0597e;
     background-color: #864879;
     border-radius: 10px;
@@ -120,8 +120,8 @@ body{
         font-family: 'Courier', monospace;
         font-smooth: never;
         -webkit-font-smoothing : none;
-        width: 40%;
-        height: 10%;
+        width: fit-content;
+        height: fit-content;
         color: white;
         background-color: #864879;
         border-radius: 10px;
@@ -130,7 +130,7 @@ body{
     }
     .main button:hover{  
         border: none;
-        width: 40%;
+        width: fit-content;
         color: #e0597e;
         background-color: #864879;
         border-radius: 10px;
@@ -167,8 +167,8 @@ body{
         font-smooth: never;
         -webkit-font-smoothing : none;
         border: none;
-        width: 20%;
-        height: 10%;
+        width: fit-content;
+        height: fit-content;
         color: white;
         background-color: #864879;
         border-radius: 10px;
@@ -177,7 +177,7 @@ body{
     }
     .main button:hover{  
         border: none;
-        width: 20%;
+        width: fit-content;
         color: #e0597e;
         background-color: #864879;
         border-radius: 10px;

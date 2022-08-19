@@ -16,22 +16,27 @@
     <div class="main"> 
         <p id="text"></p>
         <button id="bt1" onclick="tell()">Really?</button>
-        <button class="bt2" id="bt2" onclick="death()">I don't care...</button>
-        <img src="images/john-magallanes-kid-idle.gif" alt="">
+        <button class="bt2" id="bt2" onclick="friend()">I don't care...</button>
+        <img id="boy" src="images/john-magallanes-kid-idle.gif" alt="">
     </div>
 
 </body>
 <script>
-    let effect = document.getElementById('text');
+
+    //declaring variables
+    let boy = document.getElementById("boy");
+    let main = document.querySelector("main");
     let bt = document.getElementById("bt1");
+    let bt2 = document.getElementById("bt2");
+    let effect = document.getElementById('text');
     let i=0,text;
     text = "Hi, i am Iratni Djillali an animator."
-    let main = document.querySelector("main");
-    let bt2 = document.getElementById("bt2");
 
-
+    //disabling buttons and typing first dialogue
     disable();
-
+    typing();
+    
+    //functions to enable/disable buttons
     function disable(){
         bt.disabled = true;
         bt.hidden = true;
@@ -44,6 +49,21 @@
         bt2.disabled = false;
         bt2.hidden = false;
     }
+
+
+    //last dialogue
+    function end(){
+        bt.innerHTML = ""
+        bt.setAttribute ("onclick", "nothing()");
+        bt.style.left = "-30000px";
+        bt.style.background = "transparent";
+        bt2.style.background = "transparent";
+        bt2.innerHTML = ""
+        bt2.setAttribute ("onclick", "nothing()");
+        bt2.style.left = "-30000px";
+    }
+
+    //function for typing effect
     function typing(){
         if(i<text.length){
             effect.innerHTML +="<span>"+ text.charAt(i)+ "</span>"
@@ -54,42 +74,54 @@
             enable();
         }
     }
-    typing();
-    function tell(){
-        effect.innerHTML = "";
+
+
+    //Cringe function
+    function friend(){
         disable();
         i=0;
+        effect.innerHTML = "";
+        text= "Hey, it's fine we can still be friends check my infos in about me, maybe we have stuff in common!";
+        typing();
+        end();
+    }
+
+    //function to tell ppl about my skills
+    function tell(){
+        disable();
+        i=0;
+        effect.innerHTML = "";
         text = " If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
-        bt.innerHTML = "Ow, cool!";
-        bt2.innerHTML = "Meh, still don't care...";
+        bt.innerHTML = "let's do business!";
+        bt2.innerHTML = "do u like potatoes?";
+        bt2.setAttribute("onclick", "death()");
         bt.setAttribute("onclick", "hire()");
         typing();
-        }
+    }
+
+    //function to invite ppl to hire me
     function hire(){
         disable();
         effect.innerHTML = "";
         i=0;
         text = " You can hire me by clicking on work in the top right of the page.";
         typing();
-        bt.innerHTML = ""
-        bt.setAttribute ("onclick", "nothing()");
-        bt.style.left = "-30000px";
-        }
-        function death(){
+        end();
+    }
+
+    //function that kills u
+    function death(){
             disable();
             effect.innerHTML = "";
             i=0;
             text = "SO YOU'VE CHOSEN DEATH!!"
+            boy.setAttribute("src","images/john-magallanes-kid-kick.gif")
             typing();
-            bt.innerHTML = ""
-            bt.setAttribute ("onclick", "nothing()");
-            bt.style.left = "-30000px";
-            bt.style.background = "transparent";
-            bt2.style.background = "transparent";
-            bt2.innerHTML = ""
-            bt2.setAttribute ("onclick", "nothing()");
-            bt2.style.left = "-30000px";
-        }
+            end();
+    }
+
+    //function that does nothing
     function nothing(){}
+
 </script>
 </html>
