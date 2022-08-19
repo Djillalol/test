@@ -1,122 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Website</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div class="header">
-        <a href="htmls/aboutme.html">About me</a>
-        <a href="">Work</a>
+      <a href="htmls/aboutme.html">About me</a>
+      <a href="">Work</a>
     </div>
-    <div class="main"> 
-        <p id="text"></p>
-        <button id="bt1" onclick="tell()">Ayo, cool!</button>
-        <button class="bt2" id="bt2" onclick="friend()">I don't care...</button>
-        <img id="boy" src="images/john-magallanes-kid-idle.gif" alt="">
+    <div class="main">
+      <p id="text"></p>
+      <button id="bt1" onclick="tell()">Ayo, cool!</button>
+      <button class="bt2" id="bt2" onclick="friend()">I don't care...</button>
+      <img id="boy" src="images/john-magallanes-kid-idle.gif" alt="" />
     </div>
-
-</body>
-<script>
-
+  </body>
+  <script>
     //declaring variables
     let boy = document.getElementById("boy");
     let main = document.querySelector("main");
     let bt = document.getElementById("bt1");
     let bt2 = document.getElementById("bt2");
-    let effect = document.getElementById('text');
-    let i=0,text;
-    text = "Hi, i am Iratni Djillali an animator."
+    let effect = document.getElementById("text");
+    let i = 0,
+      text;
+    text = "Hi, i am Iratni Djillali an animator.";
 
     //disabling buttons and typing first dialogue
     disable();
     typing();
-    
-    //functions to enable/disable buttons
-    function disable(){
-        bt.disabled = true;
-        bt.hidden = true;
-        bt2.disabled = true;
-        bt2.hidden = true;
-    }
-    function enable(){
-        bt.disabled = false;
-        bt.hidden = false;
-        bt2.disabled = false;
-        bt2.hidden = false;
-    }
 
+    //functions to enable/disable buttons
+    function disable() {
+      bt.disabled = true;
+      bt.hidden = true;
+      bt2.disabled = true;
+      bt2.hidden = true;
+    }
+    function enable() {
+      bt.disabled = false;
+      bt.hidden = false;
+      bt2.disabled = false;
+      bt2.hidden = false;
+    }
 
     //last dialogue
-    function end(){
-        bt.style.display="none";
-        bt2.style.display="none";
+    function end() {
+      bt.style.display = "none";
+      bt2.style.display = "none";
     }
 
     //function for typing effect
-    function typing(){
-        if(i<text.length){
-            effect.innerHTML +="<span>"+ text.charAt(i)+ "</span>"
-            i++
-            setTimeout(typing,50);
-        }
-        if (i === text.length){
-            enable();
-        }
+    function typing() {
+      if (i < text.length) {
+        effect.innerHTML += "<span>" + text.charAt(i) + "</span>";
+        i++;
+        setTimeout(typing, 50);
+      }
+      if (i === text.length) {
+        enable();
+      }
     }
 
-
     //Cringe function
-    function friend(){
-        disable();
-        i=0;
-        effect.innerHTML = "";
-        text= "Hey, it's fine we can still be friends check my infos in about me, maybe we have stuff in common!";
-        typing();
-        end();
+    function friend() {
+      disable();
+      i = 0;
+      effect.innerHTML = "";
+      text =
+        "Hey, it's fine we can still be friends check my infos in about me, maybe we have stuff in common!";
+      typing();
+      end();
     }
 
     //function to tell ppl about my skills
-    function tell(){
-        disable();
-        i=0;
-        effect.innerHTML = "";
-        text = " If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
-        bt.innerHTML = "let's do business!";
-        bt2.innerHTML = "do u like potatoes?";
-        bt2.setAttribute("onclick", "death()");
-        bt.setAttribute("onclick", "hire()");
-        typing();
+    function tell() {
+      disable();
+      i = 0;
+      effect.innerHTML = "";
+      text =
+        " If you already have a model and you need rigging, paintweighting, or animation, then you've come to the right place! I also make personal websites If you are interested.";
+      bt.innerHTML = "let's do business!";
+      bt2.innerHTML = "do u like potatoes?";
+      bt2.setAttribute("onclick", "death()");
+      bt.setAttribute("onclick", "hire()");
+      typing();
     }
 
     //function to invite ppl to hire me
-    function hire(){
-        disable();
-        effect.innerHTML = "";
-        i=0;
-        text = " You can hire me by clicking on work in the top right of the page.";
-        boy.setAttribute("src","images/john-magallanes-kid-jump.gif");
-        typing();
-        end();
+    function hire() {
+      disable();
+      effect.innerHTML = "";
+      i = 0;
+      text =
+        " You can hire me by clicking on work in the top right of the page.";
+      boy.setAttribute("src", "images/john-magallanes-kid-jump.gif");
+      typing();
+      end();
     }
 
     //function that kills u
-    function death(){
-            disable();
-            effect.innerHTML = "";
-            i=0;
-            text = "SO YOU'VE CHOSEN DEATH!!"
-            boy.setAttribute("src","images/john-magallanes-kid-kick.gif");
-            typing();
-            end();
+    function death() {
+      disable();
+      effect.innerHTML = "";
+      i = 0;
+      text = "SO YOU'VE CHOSEN DEATH!!";
+      boy.setAttribute("src", "images/john-magallanes-kid-kick.gif");
+      typing();
+      end();
     }
 
     //function that does nothing
-    function nothing(){}
-
-</script>
+    function nothing() {}
+  </script>
 </html>
