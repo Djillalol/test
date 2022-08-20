@@ -24,6 +24,7 @@
       <button class="bt2" id="bt2" onclick="friend()">I don't care...</button>
       <img id="boy" src="images/john-magallanes-kid-idle.gif" alt="" />
     </div>
+    <img class="gokhan" src="images/gokhan-yalvac-walk.gif" alt="" hidden />
   </body>
   <script>
     //declaring variables
@@ -31,6 +32,7 @@
     audio.src = "mp3/typing.wav";
     const music = new Audio();
     music.src = "mp3/omega.mp3";
+    let gokhan = document.querySelector(".gokhan");
     let boy = document.getElementById("boy");
     let main = document.querySelector(".main");
     let bt = document.getElementById("bt1");
@@ -40,6 +42,7 @@
       text;
     text = "Hi, i am Iratni Djillali an animator.";
     let splashScreen = document.querySelector(".splash");
+    gokhan.style.left = "0";
 
     //disabling buttons and typing first dialogue
     disable();
@@ -136,6 +139,9 @@
       disable();
       effect.innerHTML = "";
       i = 0;
+      gokhan.hidden = false;
+      gokhan.style.left = "60%";
+      gokhan.style.transition = "10s";
       text = "SO YOU'VE CHOSEN DEATH!!";
       boy.setAttribute("src", "images/john-magallanes-kid-kick.gif");
       typing();
