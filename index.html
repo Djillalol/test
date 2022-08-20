@@ -13,7 +13,7 @@
       <a href="">Work</a>
     </div>
     <div class="splash" id="splash">
-      <h1 class="splash-header">Welcome</h1>
+      <h1 class="splash-header">Click anywhere!</h1>
     </div>
     <div class="start">
       <img src="" alt="" />
@@ -58,9 +58,9 @@
     }
     //splash
     function op() {
+      splashScreen.style.opacity = 0;
       first();
       main.style.display = "flex";
-      splashScreen.style.opacity = 0;
       setTimeout(() => {
         splashScreen.classList.add("hidden");
       }, 610);
