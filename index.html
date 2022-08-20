@@ -29,6 +29,8 @@
     //declaring variables
     const audio = new Audio();
     audio.src = "mp3/typing.wav";
+    const music = new Audio();
+    music.src = "mp3/omega.mp3";
     let boy = document.getElementById("boy");
     let main = document.querySelector(".main");
     let bt = document.getElementById("bt1");
@@ -86,6 +88,7 @@
     }
     //first dialogue
     function first() {
+      music.play();
       disable();
       i = 0;
       typing();
