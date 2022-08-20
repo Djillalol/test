@@ -63,7 +63,7 @@ body{
     -webkit-font-smoothing : none;
     font-size: xx-large;
     margin-left: 50px;
-    color: #51557E;
+    color: white;
     text-decoration: none;
 }
 .main {
@@ -105,7 +105,7 @@ body{
 .main button:hover{  
     border: none;
     width: fit-content;
-    color: #51557E;
+    color: yellow;
     background-color: #2D4263;
     border-radius: 10px;
     font-size: x-large;
@@ -157,7 +157,7 @@ body{
     .main button:hover{  
         border: none;
         width: fit-content;
-        color: #e0597e;
+        color: yellow;
         background-color: #2D4263;
         border-radius: 10px;
         font-size: large;
@@ -204,7 +204,7 @@ body{
     .main button:hover{  
         border: none;
         width: fit-content;
-        color: #e0597e;
+        color: yellow;
         background-color: #2D4263;
         border-radius: 10px;
         font-size: x-large;
