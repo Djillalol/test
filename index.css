@@ -19,7 +19,7 @@ body{
     width: 85%;
     border-radius: 10px;
     transform: translate(-50%,-50%);
-    background-color: #C84B31;
+    background-color: #51557E;
     transition: all ease-in-out 600ms;
 }
 .hidden{
@@ -63,7 +63,7 @@ body{
     -webkit-font-smoothing : none;
     font-size: xx-large;
     margin-left: 50px;
-    color: #C84B31;
+    color: #51557E;
     text-decoration: none;
 }
 .main {
@@ -105,7 +105,7 @@ body{
 .main button:hover{  
     border: none;
     width: fit-content;
-    color: #C84B31;
+    color: #51557E;
     background-color: #2D4263;
     border-radius: 10px;
     font-size: x-large;
