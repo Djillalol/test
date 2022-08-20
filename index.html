@@ -12,6 +12,12 @@
       <a href="htmls/aboutme.html">About me</a>
       <a href="">Work</a>
     </div>
+    <div class="splash" id="splash">
+      <h1 class="splash-header">Welcome</h1>
+    </div>
+    <div class="start">
+      <img src="" alt="" />
+    </div>
     <div class="main">
       <p id="text"></p>
       <button id="bt1" onclick="tell()">Ayo, cool!</button>
@@ -24,18 +30,18 @@
     const audio = new Audio();
     audio.src = "mp3/typing.wav";
     let boy = document.getElementById("boy");
-    let main = document.querySelector("main");
+    let main = document.querySelector(".main");
     let bt = document.getElementById("bt1");
     let bt2 = document.getElementById("bt2");
     let effect = document.getElementById("text");
     let i = 0,
       text;
-
     text = "Hi, i am Iratni Djillali an animator.";
+    let splashScreen = document.querySelector(".splash");
 
     //disabling buttons and typing first dialogue
     disable();
-    typing();
+    splashScreen.addEventListener("click", op);
 
     //functions to enable/disable buttons
     function disable() {
@@ -50,7 +56,15 @@
       bt2.disabled = false;
       bt2.hidden = false;
     }
-
+    //splash
+    function op() {
+      first();
+      main.style.display = "flex";
+      splashScreen.style.opacity = 0;
+      setTimeout(() => {
+        splashScreen.classList.add("hidden");
+      }, 610);
+    }
     //last dialogue
     function end() {
       bt.style.display = "none";
@@ -69,6 +83,12 @@
         enable();
         audio.pause();
       }
+    }
+    //first dialogue
+    function first() {
+      disable();
+      i = 0;
+      typing();
     }
 
     //Cringe function
