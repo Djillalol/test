@@ -122,9 +122,9 @@ body, html{
         grid-template-areas: "d d"  "b c";
         grid-auto-rows: 300px;
         position: absolute;
-        top: 0%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,-50%);
     }
     
 }
@@ -149,8 +149,8 @@ body, html{
         grid-template-areas: "d d" "b c";
         grid-auto-rows: 300px;
         position: absolute;
-        top: 10%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,-50%);
     }
 }
