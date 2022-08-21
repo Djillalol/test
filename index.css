@@ -1,5 +1,30 @@
 
-
+:root {
+    --dark-color: #635BFF;
+    --light-color: #42C4D6;
+}
+#Dark{
+    fill: var(--dark-color);
+}
+#Light{
+    fill: var(--light-color);
+}
+#dark1,#dark2,#light1{
+    transition: all 1s ease;
+}
+#dark1{
+    transform: translateX(-100%);
+}
+.splash:hover #dark1{
+    transform: translateX(0%);
+}
+.splash:hover #dark2{
+    transform: translateX(40%);
+    opacity: 0;
+}
+.splash:hover #light1{
+    transform: translateX(15%);
+}
 html {
     height: 100%;
 }
@@ -13,6 +38,9 @@ body{
 .splash{
     cursor: pointer;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     left: 50%;
     height: 85%;
@@ -170,6 +198,20 @@ body{
         background-color: #2D4263;
         border-radius: 10px;
         font-size: large;
+    }
+    .splash svg{
+        display: none;
+    }
+    .splash-header{
+        height: 90%;
+        color: white;
+        font-family: 'Courier', monospace;
+        font-smooth: never;
+        -webkit-font-smoothing : none;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media screen and ( max-width: 1450px) and (min-width:660px) {

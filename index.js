@@ -3,6 +3,7 @@
     audio.src = "mp3/typing.wav";
     const music = new Audio();
     music.src = "mp3/omega.mp3";
+    const svg = document.getElementById("Play animation");
     let boy = document.getElementById("boy");
     let main = document.querySelector(".main");
     let bt = document.getElementById("bt1");
@@ -113,6 +114,15 @@
       typing();
       end();
     }
+
+    //Play button animation
+    splashScreen.addEventListener("mouseover", ani);
+    function ani(){
+      const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+      const rando = () => colors[Math.floor(Math.random() * colors.length)]
+      document.documentElement.style.cssText = "  --dark-color: ${rando()};--light-color:${rando()}"
+    }
+
 
     //function that does nothing
     function nothing() {}
