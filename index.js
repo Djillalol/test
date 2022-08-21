@@ -4,6 +4,9 @@
     const music = new Audio();
     music.src = "mp3/omega.mp3";
     const svg = document.getElementById("Play animation");
+    const msvg = document.getElementById("mainsvg");
+    let g = document.getElementById("g");
+    let path = document.getElementById("path");
     let boy = document.getElementById("boy");
     let main = document.querySelector(".main");
     let bt = document.getElementById("bt1");
@@ -113,14 +116,6 @@
       boy.setAttribute("src", "images/john-magallanes-kid-kick.gif");
       typing();
       end();
-    }
-
-    //Play button animation
-    splashScreen.addEventListener("mouseover", ani);
-    function ani(){
-      const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
-      const rando = () => colors[Math.floor(Math.random() * colors.length)]
-      document.documentElement.style.cssText = "  --dark-color: ${rando()};--light-color:${rando()}"
     }
 
 
