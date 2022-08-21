@@ -17,6 +17,7 @@
     text = "Hi, i am Iratni Djillali an animator.";
     let splashScreen = document.querySelector(".splash");
 
+
     //disabling buttons and typing first dialogue
     disable();
     splashScreen.addEventListener("click", op);
@@ -37,7 +38,7 @@
     //splash
     function op() {
       splashScreen.style.opacity = 0;
-      first();
+      setTimeout(first, 2100);
       main.style.display = "flex";
       setTimeout(() => {
         splashScreen.classList.add("hidden");
@@ -60,11 +61,14 @@
       if (i === text.length) {
         enable();
         audio.pause();
+        
       }
+      
     }
     //first dialogue
     function first() {
       //music.play();
+      boy.setAttribute("src", "images/john-magallanes-kid-idle.gif");
       disable();
       i = 0;
       typing();

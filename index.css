@@ -71,12 +71,21 @@ body{
     height: 20%;
     
 }
-.main img{
+.boy{
     width: 10%;
     position: absolute;
-    left: 50%;
     top: 60%;
-    transform: translateX(-50%);
+    animation: boy 2.1s linear;
+}
+@keyframes boy {
+    from{
+        left: 30%;
+        transform: translateX(-70%);
+    }
+    to{
+        left: 50%;
+        transform: translateX(-50%);
+    } 
 }
 .header{
     width:fit-content;
