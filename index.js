@@ -67,7 +67,7 @@
     }
     //first dialogue
     function first() {
-      music.play();
+      //music.play();
       boy.setAttribute("src", "images/john-magallanes-kid-idle.gif");
       disable();
       i = 0;
