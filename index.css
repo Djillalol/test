@@ -15,23 +15,6 @@
 #dark1{
     transform: translateX(-100%);
 }
-#mainsvg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-#blob{
-    animation: blob 10s linear infinite;
-}
-@keyframes blob {
-    from{
-        transform: rotateZ(360deg);
-    }
-    to{
-        transform: rotateZ(0deg);
-    }
-}
 .splash:hover #dark1{
     transform: translateX(0%);
 }
@@ -47,8 +30,9 @@ html {
 }
 body{
     min-height: 100%;
-    background-color: #1F1D36;
+    background: #1F1D36;
     background-size: cover;
+    background-repeat: no-repeat;
     padding: 0;
     margin:0;
 }
@@ -119,7 +103,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    background-color: #1F1D36;
+    background-color: transparent;
     color: white;
     font-size: x-large;
     text-align: left;
